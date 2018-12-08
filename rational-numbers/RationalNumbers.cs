@@ -14,11 +14,21 @@ public struct RationalNumber
 {
     private readonly int _num;
     private readonly int _dom;
+
+    public int Num => _num;
+    public int Dom => _dom;
+
     public RationalNumber(int numerator, int denominator)
     {
-        _num = numerator;
-        _dom = denominator;
+        var GCD = RationalNumber.GCD(numerator, denominator);
+
+        _num = numerator / GCD;
+        _dom = denominator / GCD;
+
+
     }
+
+    static int GCD(int a, int b) => b == 0 ? a : GCD(b, a % b);
 
     public RationalNumber Add(RationalNumber r)
     {
