@@ -12,12 +12,12 @@ public static class RealNumberExtension
 
 public struct RationalNumber
 {
-    public readonly int[] _r;
+    private readonly int _num;
+    private readonly int _dom;
     public RationalNumber(int numerator, int denominator)
     {
-        _r = new int[2];
-        _r[0] = numerator;
-        _r[1] = denominator;
+        _num = numerator;
+        _dom = denominator;
     }
 
     public RationalNumber Add(RationalNumber r)
@@ -27,8 +27,8 @@ public struct RationalNumber
 
     public static RationalNumber operator +(RationalNumber r1, RationalNumber r2)
     {
-        var n = (r1._r[0] * r2._r[1]) + (r1._r[1] * r2._r[0]);
-        var d = r1._r[1] * r2._r[1];
+        var n = (r1._num * r2._dom) + (r1._dom * r2._num);
+        var d = r1._dom * r2._dom;
         return new RationalNumber(n, d);
     }
 
