@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Runtime.InteropServices;
 
 namespace test
 {
@@ -6,13 +7,12 @@ namespace test
     {
         static void Main(string[] args)
         {
-            var r1 = new RationalNumber(1, 2);
-            var r2 = new RationalNumber(-1, 2);
+            var basenumber = 8;
+            var r1 = new RationalNumber(4, 3);
 
-            var result = r1.Add(r2);
+            var result = basenumber.Expreal(r1);
+            Console.WriteLine(result);
 
-            Console.WriteLine(result.Num);
-            Console.WriteLine(result.Dom);
         }
     }
 }

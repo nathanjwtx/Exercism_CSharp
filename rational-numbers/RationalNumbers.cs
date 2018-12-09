@@ -6,7 +6,11 @@ public static class RealNumberExtension
 {
     public static double Expreal(this int realNumber, RationalNumber r)
     {
-        throw new NotImplementedException("You need to implement this extension method.");
+        var p = Math.Pow(realNumber, r.Num);
+        var q = (float)1 / r.Dom;
+        var result = Math.Pow(p, q);
+        Console.WriteLine(result);
+        return result;
     }
 }
 
@@ -67,31 +71,32 @@ public struct RationalNumber
 
     public RationalNumber Div(RationalNumber r)
     {
-        throw new NotImplementedException("You need to implement this function.");
+        return this / r;
     }
 
     public static RationalNumber operator /(RationalNumber r1, RationalNumber r2)
     {
-        throw new NotImplementedException("You need to implement this operator.");
+        return new RationalNumber(r1._num * r2._dom, r1._dom * r2._num);
     }
 
     public RationalNumber Abs()
     {
-        throw new NotImplementedException("You need to implement this function.");
+        return new RationalNumber(Math.Abs(this._num), Math.Abs(this._dom));
     }
 
     public RationalNumber Reduce()
     {
-        throw new NotImplementedException("You need to implement this function.");
+        return new RationalNumber(_num, _dom);
     }
 
     public RationalNumber Exprational(int power)
     {
-        throw new NotImplementedException("You need to implement this function.");
+        return new RationalNumber(Convert.ToInt32(Math.Pow(_num, power)), Convert.ToInt32(Math.Pow(_dom, power)));
     }
 
     public double Expreal(int baseNumber)
     {
-        throw new NotImplementedException("You need to implement this function.");
+        return baseNumber.Expreal(this);
+
     }
 }
