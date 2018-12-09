@@ -28,6 +28,7 @@ public struct RationalNumber
 
     }
 
+    // GCD taken from dipique's solution
     static int GCD(int a, int b) => b == 0 ? a : GCD(b, a % b);
 
     public RationalNumber Add(RationalNumber r)
@@ -44,22 +45,24 @@ public struct RationalNumber
 
     public RationalNumber Sub(RationalNumber r)
     {
-        throw new NotImplementedException("You need to implement this function.");
+        return this - r;
     }
 
     public static RationalNumber operator -(RationalNumber r1, RationalNumber r2)
     {
-        throw new NotImplementedException("You need to implement this operator.");
+        var n = r1._num * r2._dom - r2._num * r1._dom;
+        return new RationalNumber(n, r1._dom * r2._dom);
     }
 
     public RationalNumber Mul(RationalNumber r)
     {
-        throw new NotImplementedException("You need to implement this function.");
+        return this * r;
     }
 
     public static RationalNumber operator *(RationalNumber r1, RationalNumber r2)
     {
-        throw new NotImplementedException("You need to implement this operator.");
+        var n = r1._num * r2._num;
+        return new RationalNumber(n, r1._dom * r2._dom);
     }
 
     public RationalNumber Div(RationalNumber r)
