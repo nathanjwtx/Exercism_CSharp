@@ -137,7 +137,7 @@ public class ComplexNumbersTest
         Assert.Equal(expected.Imaginary(), sut.Mul(new ComplexNumber(3, 4)).Imaginary(), precision: 7);
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Divide_purely_real_numbers()
     {
         var sut = new ComplexNumber(1, 0);
@@ -146,7 +146,7 @@ public class ComplexNumbersTest
         Assert.Equal(expected.Imaginary(), sut.Div(new ComplexNumber(2, 0)).Imaginary(), precision: 7);
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Divide_purely_imaginary_numbers()
     {
         var sut = new ComplexNumber(0, 1);
@@ -155,7 +155,7 @@ public class ComplexNumbersTest
         Assert.Equal(expected.Imaginary(), sut.Div(new ComplexNumber(0, 2)).Imaginary(), precision: 7);
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Divide_numbers_with_real_and_imaginary_part()
     {
         var sut = new ComplexNumber(1, 2);
@@ -164,42 +164,42 @@ public class ComplexNumbersTest
         Assert.Equal(expected.Imaginary(), sut.Div(new ComplexNumber(3, 4)).Imaginary(), precision: 7);
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Absolute_value_of_a_positive_purely_real_number()
     {
         var sut = new ComplexNumber(5, 0);
         Assert.Equal(5, sut.Abs());
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Absolute_value_of_a_negative_purely_real_number()
     {
         var sut = new ComplexNumber(-5, 0);
         Assert.Equal(5, sut.Abs());
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Absolute_value_of_a_purely_imaginary_number_with_positive_imaginary_part()
     {
         var sut = new ComplexNumber(0, 5);
         Assert.Equal(5, sut.Abs());
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Absolute_value_of_a_purely_imaginary_number_with_negative_imaginary_part()
     {
         var sut = new ComplexNumber(0, -5);
         Assert.Equal(5, sut.Abs());
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Absolute_value_of_a_number_with_real_and_imaginary_part()
     {
         var sut = new ComplexNumber(3, 4);
         Assert.Equal(5, sut.Abs());
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Conjugate_a_purely_real_number()
     {
         var sut = new ComplexNumber(5, 0);
@@ -208,7 +208,7 @@ public class ComplexNumbersTest
         Assert.Equal(expected.Imaginary(), sut.Conjugate().Imaginary(), precision: 7);
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Conjugate_a_purely_imaginary_number()
     {
         var sut = new ComplexNumber(0, 5);
@@ -217,7 +217,7 @@ public class ComplexNumbersTest
         Assert.Equal(expected.Imaginary(), sut.Conjugate().Imaginary(), precision: 7);
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Conjugate_a_number_with_real_and_imaginary_part()
     {
         var sut = new ComplexNumber(1, 1);

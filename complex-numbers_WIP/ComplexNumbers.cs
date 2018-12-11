@@ -43,17 +43,33 @@ public struct ComplexNumber
 
     public ComplexNumber Div(ComplexNumber other)
     {
-        throw new NotImplementedException("You need to implement this function.");
+        var con = other.Conjugate();
+
+        var numFirsts = _real * con._real;
+        var numOuters = _real * con._imaginary;
+        var numInners = _imaginary * con._real;
+        var numLasts = _imaginary * con._imaginary * -1;
+
+        var domFirsts = other._real * con._real;
+        var domOuters = other._real * con._imaginary; // not required as it cancels out domInners
+        var domInners = other._imaginary * con._real; // see above
+        var domLasts = other._imaginary * con._imaginary * -1;
+
+        var numA = numFirsts + numLasts;
+        var numB = numOuters + numInners;
+        var dom = domFirsts + domLasts;
+
+        return new ComplexNumber(numA / dom, numB / dom);
     }
 
     public double Abs()
     {
-        throw new NotImplementedException("You need to implement this function.");
+        return Math.Sqrt(_real * _real + _imaginary * _imaginary);
     }
 
     public ComplexNumber Conjugate()
     {
-        throw new NotImplementedException("You need to implement this function.");
+        return new ComplexNumber(_real, _imaginary * -1);
     }
     
     public ComplexNumber Exp()
