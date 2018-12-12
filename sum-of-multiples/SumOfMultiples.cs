@@ -17,13 +17,10 @@ public static class SumOfMultiples
             from y in multiples
             where y != 0 // prevents an error if one of the values in multiples is 0
             where x % y == 0
-            select x).ToList();
-
-        var result = interimResult.Distinct().ToList();
+            select x).Distinct().ToList();
 
         Console.WriteLine(string.Join(", ", interimResult));
-        Console.WriteLine(result.Sum());
 
-        return result.Sum();
+        return interimResult.Sum();
     }
 }
