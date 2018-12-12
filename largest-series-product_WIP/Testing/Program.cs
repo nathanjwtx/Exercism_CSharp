@@ -6,7 +6,7 @@ namespace Testing
     {
         static void Main(string[] args)
         {
-            var result = LargestSeriesProduct.GetLargestProduct("123456", 2);
+            var result = LargestSeriesProduct.GetLargestProduct("123456", 6);
 
             Console.WriteLine(result);
         }
