@@ -29,5 +29,8 @@ public static class Grains
         // genius solution from exercism
         // works because max value of ulong data type is 2 ^ 64 -1 integers
         // return ulong.MaxValue;
+
+//        here's another solution
+//        public static double Total() => Enumerable.Range(1, 64).Select(Square).Sum();
     }
 }
