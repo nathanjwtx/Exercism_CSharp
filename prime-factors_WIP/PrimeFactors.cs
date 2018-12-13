@@ -9,7 +9,6 @@ public static class PrimeFactors
     
     public static int[] Factors(long number)
     {
-        Console.WriteLine(number);
         if (number == 1)
         {
             return Primes.ToArray();
@@ -18,12 +17,10 @@ public static class PrimeFactors
         {
             if (number > PreviousNumber && PreviousNumber != 0)
             {
-//                Console.WriteLine("End");
                 break;
             }
             if (number % i == 0)
             {
-//                Console.WriteLine(i);
                 Primes.Add(i);
                 PreviousNumber = number;
                 Factors(number / i);
