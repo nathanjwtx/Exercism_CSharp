@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# 
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pythagoreantriplet", "pythagoreantriplet.csproj", "{F1AE89DD-BACB-49B0-B055-9496BC88C946}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "testing", "testing\testing.csproj", "{77F3CB57-7DFF-444A-8517-A80D903C8E4F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F1AE89DD-BACB-49B0-B055-9496BC88C946}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1AE89DD-BACB-49B0-B055-9496BC88C946}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1AE89DD-BACB-49B0-B055-9496BC88C946}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1AE89DD-BACB-49B0-B055-9496BC88C946}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77F3CB57-7DFF-444A-8517-A80D903C8E4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77F3CB57-7DFF-444A-8517-A80D903C8E4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77F3CB57-7DFF-444A-8517-A80D903C8E4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77F3CB57-7DFF-444A-8517-A80D903C8E4F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

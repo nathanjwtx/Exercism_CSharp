@@ -18,30 +18,54 @@ public static class RotationalCipher
         }
 
         var result = "";
-//        Console.WriteLine((int) 'Y');
-        Console.WriteLine((int) 'a');
+
         foreach (char c in text)
         {
             // check for punctuation or space
-            if (char.IsPunctuation(c) || char.IsWhiteSpace(c))
+            if (char.IsPunctuation(c) || char.IsWhiteSpace(c) || char.IsNumber(c))
             {
                 result += c;
             }
-            if ((int) c + shiftKey > 90)
+            // lower case
+            else if ((int)c + shiftKey > LowerZ)
+            {
+
+                var x = (int)c + shiftKey - LowerZ;
+                result += Convert.ToChar(LowerA + x - 1);
+
+            }
+            else if ((int)c < LowerZ && (int)c >= LowerA)
+            {
+                result += Convert.ToChar((int)c + shiftKey);
+            }
+            // upper case
+            else if ((int) c + shiftKey > UpperZ)
             {
                 
                 var x = (int) c + shiftKey - UpperZ;
                 result += Convert.ToChar(UpperA + x - 1);
 
-            }   
+            }
+            else if ((int) c < UpperZ)
+            {
+                result += Convert.ToChar((int) c + shiftKey);
+            }
         }
 
-        
+        // top online solution
+        public static string RotateOnline(string text, int shiftKey)
+        {
+            char Rotate(char c)
+            {
+                if (!char.IsLetter(c))
+                    return c;
+                int b = char.IsLower(c) ? 'a' : 'A';
+                return (char)(b + ((c - b + shiftKey) % 26));
+            }
 
-//        foreach (var i in interimResult)
-//        {
-//            result += (char) i;
-//        }
+            return new string(text.Select(Rotate).ToArray());
+        }
+
         return result;
     }
 }
