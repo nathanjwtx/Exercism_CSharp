@@ -38,6 +38,9 @@ public static class ErrorHandling
 
     public static void DisposableResourcesAreDisposedWhenExceptionIsThrown(IDisposable disposableObject)
     {
-        throw new NotImplementedException();
+        using (disposableObject)
+        {
+            throw new Exception();
+        }
     }
 }
