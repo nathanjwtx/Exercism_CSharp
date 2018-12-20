@@ -6,7 +6,7 @@ namespace Testing
     {
         static void Main(string[] args)
         {
-            var twelve = TwelveDays.Recite(1, 3);
+            var twelve = TwelveDays.Recite(4, 6);
 
             Console.WriteLine(twelve);
         }

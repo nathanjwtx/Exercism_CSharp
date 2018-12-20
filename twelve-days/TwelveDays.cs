@@ -47,6 +47,38 @@ public static class TwelveDays
 
     public static string Recite(int startVerse, int endVerse)
     {
-        throw new NotImplementedException();
+        var result = "";
+
+        for (int j = startVerse; j <= endVerse; j++)
+        {
+            var output = $"On the {Verses[j][0]} day of Christmas my true love gave to me: ";
+            for (int i = j; i > 0 ; i--)
+            {
+                if (j == 1)
+                {
+                    output += $"{Verses[i][1]}";
+                }
+                else if (i == 1)
+                {
+                    output += $"and a Partridge in a Pear Tree";
+                }
+                else
+                {
+                    output += $"{Verses[i][1]}, ";
+                }
+            }
+
+            if (j != endVerse)
+            {
+                output += $".\n";
+            }
+            result += output;
+        }
+
+        result += ".";
+            
+        return result;
+
+
     }
 }
