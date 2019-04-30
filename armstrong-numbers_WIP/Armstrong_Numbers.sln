@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArmstrongNumbers", "ArmstrongNumbers.csproj", "{F5034406-1CC1-47A9-BBBC-E9EE60EED5EC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Testing", "Testing\Testing.csproj", "{A7C5D53C-8E14-4B37-8326-BFBC08D80E28}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F5034406-1CC1-47A9-BBBC-E9EE60EED5EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5034406-1CC1-47A9-BBBC-E9EE60EED5EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5034406-1CC1-47A9-BBBC-E9EE60EED5EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5034406-1CC1-47A9-BBBC-E9EE60EED5EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7C5D53C-8E14-4B37-8326-BFBC08D80E28}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7C5D53C-8E14-4B37-8326-BFBC08D80E28}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7C5D53C-8E14-4B37-8326-BFBC08D80E28}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7C5D53C-8E14-4B37-8326-BFBC08D80E28}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
